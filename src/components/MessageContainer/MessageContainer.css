@@ -1,0 +1,5 @@
+.message__list {
+    flex: 1;
+    overflow-y: auto;
+    list-style: none;
+}

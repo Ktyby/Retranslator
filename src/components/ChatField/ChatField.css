@@ -1,0 +1,5 @@
+.chat__field{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
