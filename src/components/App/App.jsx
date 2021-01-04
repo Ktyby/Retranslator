@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from '../Header/Header';
 import Main from '../Main/Main';
-import Message from '../Message/Message';
+import Video from '../Video';
 
 class App extends React.Component {
   onSendNewMessage = async (message) => {
@@ -67,6 +67,7 @@ class App extends React.Component {
             chatroomName={this.state.chatroomName} 
             me={this.state.me}    
         />
+        <Video />
         <Main
           members={this.state.members}
           messages={this.state.messages}
