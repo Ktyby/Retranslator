@@ -1,23 +1,23 @@
 .header {
-    background-color: #fafafa;
-    border-bottom: 1px solid #eee;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 60px;
-    box-sizing: border-box;
+	background-color: #fafafa;
+	border-bottom: 1px solid #eee;
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 60px;
+	box-sizing: border-box;
 }
 
 .room__title {
-    font-size: 1.2em;
-    line-height: 100%;
-    margin: 0;
-    font-weight: bold;
+	font-size: 1.2em;
+	line-height: 100%;
+	margin: 0;
+	font-weight: bold;
 }
 
 .header__input-name {
-    margin-left: auto;
-    padding: 10px;
-    margin-right: 5px;
+	margin-left: auto;
+	padding: 10px;
+	margin-right: 5px;
 }

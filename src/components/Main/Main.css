@@ -1,7 +1,7 @@
 .main__section {
-    display: flex;
-    flex-direction: row;
-    justify-content: stretch;
-    flex: 1;
-    height: 500px;
+	display: flex;
+	flex-direction: row;
+	justify-content: stretch;
+	flex: 1;
+	height: 500px;
 }

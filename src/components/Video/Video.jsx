@@ -4,8 +4,8 @@ const Video = () => {
   const getRefVideo = (video) => {
     if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
       navigator.mediaDevices.getUserMedia({ video: true, audio: true  }).then((stream) => {
-          video.srcObject = stream;
-          video.play();
+        video.srcObject = stream;
+        video.play();
       });
     } 
   }
