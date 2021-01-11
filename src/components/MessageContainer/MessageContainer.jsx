@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './MessageContainer.css';
 import Message from '../Message/Message';
 
@@ -15,6 +16,16 @@ const MessageContainer = (props) => {
 		  {messageList}
 	  </ul>
   );
+}
+
+MessageContainer.propTypes = {
+	messages: PropTypes.func,
+	members: PropTypes.func
+}
+
+MessageContainer.propTypes = {
+	messages: () => {},
+	members: () => {}
 }
 
 export default MessageContainer;

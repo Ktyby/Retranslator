@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './MemberItem.css';
 import icon from './unnamed.jpg';
 
@@ -22,6 +23,16 @@ const MemberItem = (props) => {
 			{props.member.is_online && <p className="member__online">•</p>}
     </li>
   );
+}
+
+MemberItem.propTypes = {
+  member: PropTypes.object,
+  me: PropTypes.object
+}
+
+MemberItem.defaultProps = {
+  member: {},
+  me: {}
 }
 
 export default MemberItem;

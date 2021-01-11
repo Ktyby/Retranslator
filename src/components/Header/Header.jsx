@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Header.css'
 
 const Header = (props) => {
@@ -9,6 +10,14 @@ const Header = (props) => {
       </div>
     </header>
   );
+}
+
+Header.propTypes = {
+  chatroomName: PropTypes.string
+}
+
+Header.defaultProps = {
+  chatroomName: ''
 }
 
 export default Header;

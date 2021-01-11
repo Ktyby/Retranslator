@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Main.css';
 import MemberList from '../MemberList/MemberList';
 import ChatField from '../ChatField';
@@ -17,5 +18,18 @@ const Main = (props) => {
   );
 }
 
+Main.propTypes = {
+  messages: PropTypes.array,
+  members: PropTypes.array,
+  me: PropTypes.object,
+  onSendNewMessage: PropTypes.func
+}
+
+Main.defaultProps = {
+  messages: [],
+  members: [],
+  me: {},
+  onSendNewMessage: () => {}
+}
 
 export default Main;

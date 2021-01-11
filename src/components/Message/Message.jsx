@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Message.css';
 import icon from './user-circle-solid.svg';
 
@@ -22,6 +23,16 @@ const Message = (props) => {
 			</div>
 		</li>
 	);
+}
+
+Message.propTypes = {
+	sender: PropTypes.object,
+	message: PropTypes.object
+}
+
+Message.defaultProps = {
+	sender: {},
+	message: {}
 }
 
 export default Message;

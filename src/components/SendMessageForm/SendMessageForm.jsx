@@ -1,46 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import './SendMessageForm.css';
 
-class SendMessageForm extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			message: ''
-		};
+const SendMessageForm = (props) => {
+	const [message, setMessage] = useState('');
+
+	const currentMessageChanged = (evt) => {
+		setMessage(evt.target.value);
 	}
 
-	currentMessageChanged = (e) => {
-		this.setState({ message: e.target.value });
-	}
+	const sendMessageClicked = async (evt) => {
+		evt.preventDefault();
 
-	sendMessageClicked = async (e) => {
-		e.preventDefault();
+		if (message.length > 0) {
+			await props.onSendNewMessage(message);
 
-		if (this.state.message.length > 0) {
-			await this.props.onSendNewMessage(this.state.message);
-			this.setState({ ...this.state, ...{ message : '' } });
+			setMessage('');
 		}
 	}
 
-	render() {
-		return (
-			<section className="send-form__section">
-				<form className="form">
-					<input 
-						className="form__input"
-						type="text" 
-						value={this.state.message} 
-						onChange={this.currentMessageChanged} 
-						placeholder="Type message to send"/>
-					<button 
-						className="form__button"
-						type="submit" 
-						onClick={this.sendMessageClicked}
-					>Send</button>
-				</form>
-			</section>
-		);
-	}
+	return (
+		<section className="send-form__section">
+			<form className="form">
+				<input 
+					className="form__input"
+					type="text" 
+					value={message} 
+					onChange={currentMessageChanged} 
+					placeholder="Type message to send"/>
+				<button 
+					className="form__button"
+					type="submit" 
+					onClick={sendMessageClicked}
+				>Send</button>
+			</form>
+		</section>
+	);
+}
+
+SendMessageForm.propTypes = {
+	onSendNewMessage: PropTypes.func
+}
+
+SendMessageForm.propTypes = {
+	onSendNewMessage: () => {},
 }
 
 export default SendMessageForm;

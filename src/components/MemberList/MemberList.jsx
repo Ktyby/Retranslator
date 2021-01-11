@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './MemberList.css';
 import MemberItem from '../MemberItem/MemberItem';
 
@@ -10,6 +11,16 @@ const MemberList = (props) => {
 			{members}
 		</ul>
 	);
+}
+
+MemberList.propTypes = {
+	member: PropTypes.object,
+  me: PropTypes.object
+}
+
+MemberList.defaultProps = {
+	member: {},
+  me: {}
 }
 
 export default MemberList;
