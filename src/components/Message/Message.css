@@ -1,6 +1,7 @@
 .message__item {
 	display: flex;
 	flex-direction: row;
+
 	margin: 10px
 }
 .message__icon {
@@ -8,10 +9,11 @@
 	height: 30px;
 }
 .message__bubble {
-	margin-left: 10px;
 	display: flex;
 	flex-direction: column;
 	flex: 1;
+	
+	margin-left: 10px;
 }
 .message__name {
 	font-weight: bold;

@@ -13,6 +13,8 @@ const MemberItem = (props) => {
     }
   }
 
+  
+
   return(
   	<li className="member__item">
       <img className="member__icon" src={icon} alt={props.member.name}/>

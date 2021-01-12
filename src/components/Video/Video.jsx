@@ -25,14 +25,12 @@ const Video = () => {
 				errorComponent={<p>Oops, something went wrong</p>} />
 		</div>
   ) : (
-		<div className="video__form">
-			<form>
-				<input id='room' type='text' placeholder='Room' value={room} onChange={(evt) => setRoom(evt.target.value)} />
-				<input id='name' type='text' placeholder='Name' value={name} onChange={(evt) => setName(evt.target.value)} />
-				<input id='password' type='text' placeholder='Password (optional)' value={password} onChange={(evt) => setPassword(evt.target.value)} />
-				<button onClick={handleClick} type='submit'>Start / Join</button>
-			</form>
-		</div>
+		<form className="video__form">
+			<input id="room" type="text" placeholder="Room" value={room} onChange={(evt) => setRoom(evt.target.value)} />
+			<input id="name" type="text" placeholder="Name" value={name} onChange={(evt) => setName(evt.target.value)} />
+			<input id="password" type="text" placeholder="Password (optional)" value={password} onChange={(evt) => setPassword(evt.target.value)} />
+			<button className="video__button" onClick={handleClick} type="submit">Start / Join</button>
+		</form>
   )
 }
 

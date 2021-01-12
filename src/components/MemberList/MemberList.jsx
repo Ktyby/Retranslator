@@ -7,7 +7,7 @@ const MemberList = (props) => {
 	const members = props.members.map((member) => <MemberItem key={member.uuid} member={member} me={props.me}/>);
 
 	return (
-		<ul className="member-list">
+		<ul className="member__list">
 			{members}
 		</ul>
 	);

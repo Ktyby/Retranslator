@@ -5,9 +5,7 @@ import './Header.css'
 const Header = (props) => {
   return (
     <header className="header">
-      <div className="room__title-container">
-        <h1 className="room__title">{props.chatroomName}</h1>
-      </div>
+      <h1 className="header__title">{props.chatroomName}</h1>
     </header>
   );
 }
