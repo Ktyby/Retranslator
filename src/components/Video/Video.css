@@ -2,7 +2,7 @@
   width: 1000px;
 
   margin: 0 auto;
-  padding-bottom: 40px;
+  padding: 40px 0 40px 0;
 }
 
 .video__form {
@@ -12,7 +12,7 @@
   width: 1000px;
 
   margin: 0 auto;
-  padding-bottom: 40px;
+  padding: 40px 0 40px 0;
 }
 
 .video__button {

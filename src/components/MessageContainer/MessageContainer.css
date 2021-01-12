@@ -7,3 +7,24 @@
 
 	overflow-y: auto;
 }
+
+.message__item {
+	display: flex;
+	flex-direction: row;
+
+	margin: 10px
+}
+.message__icon {
+	width: 30px;
+	height: 30px;
+}
+.message__bubble {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	
+	margin-left: 10px;
+}
+.message__name {
+	font-weight: bold;
+}

@@ -1,10 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './MemberList.css';
-import MemberItem from '../MemberItem/MemberItem';
+import icon from './unnamed.jpg';
 
 const MemberList = (props) => {
-	const members = props.members.map((member) => <MemberItem key={member.uuid} member={member} me={props.me}/>);
+	const getName = (member) => {
+		let name = '';
+    if (member.uuid === props.me.uuid) {
+			return name = props.me.name ? props.me.name : props.me.uuid.substring(props.me.uuid.length-10, props.me.uuid.length);
+		} else {
+			return name = member.name ? member.name : member.uuid.substring(member.uuid.length-10, member.uuid.length);
+    }
+  }
+
+	const members = props.members.map((member) => {
+		return ( 
+			<li key={member.uuid} className="member__item">
+				<img className="member__icon" src={icon} alt={member.name}/>
+				<p className="member__name">
+					{getName(member)}
+					{ member.uuid === props.me.uuid && " (Вы) "}
+				</p>
+				{member.is_online && <p className="member__online">•</p>}
+			</li>
+	)});
 
 	return (
 		<ul className="member__list">
