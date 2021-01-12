@@ -7,7 +7,7 @@ import SendMessageForm from '../SendMessageForm/SendMessageForm';
 const ChatField = (props) => {
   const [messages, setMessages] = useState(props.messages);
 
-  const onMessage = (message) => {
+  const onSendNewMessage = (message) => {
     const  myMessage = {
       content: message,
       sender_id: '98s7dfh9a8s7dhf',
@@ -19,7 +19,7 @@ const ChatField = (props) => {
   return(
     <div className="chat__field">
       <MessageContainer messages={messages} members={props.members}/>
-      <SendMessageForm me={props.me} onMessage={onMessage}/>
+      <SendMessageForm me={props.me} onSendNewMessage={onSendNewMessage}/>
     </div>
   );
 }
