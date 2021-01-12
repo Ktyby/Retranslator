@@ -6,49 +6,49 @@ import Video from '../Video';
 
 const localMessages = [
   {
-    content: "Сообщение 1",
-    sender_id: "mnzxcv97zx6chvo",
-    uuid: "dg897sdfg"
+    content: 'Сообщение 1',
+    sender_id: 'mnzxcv97zx6chvo',
+    uuid: 'dg897sdfg'
   },
   {
-    content: "Сообщение 2",
-    sender_id: "98s7dfh9a8s7dhf",
-    uuid: "8723hernm"
+    content: 'Сообщение 2',
+    sender_id: '98s7dfh9a8s7dhf',
+    uuid: '8723hernm'
   },
   {
-    content: "Еще одно сообщение",
-    sender_id: "mnzxcv97zx6chvo",
-    uuid: "435nbcv98234"
+    content: 'Еще одно сообщение',
+    sender_id: 'mnzxcv97zx6chvo',
+    uuid: '435nbcv98234'
   }
 ];
 
 const localMembers = [
   {
     is_online: true,
-    name: "Алексей",
-    uuid: "98s7dfh9a8s7dhf"
+    name: 'Алексей',
+    uuid: '98s7dfh9a8s7dhf'
   },
   {
     is_online: true,
-    name: "Дмитрий",
-    uuid: "mnzxcv97zx6chvo"
+    name: 'Дмитрий',
+    uuid: 'mnzxcv97zx6chvo'
   },
   {
     is_online: false,
-    name: "Андрей",
-    uuid: "kjuhv987ashdfoua"
+    name: 'Андрей',
+    uuid: 'kjuhv987ashdfoua'
   },
   {
     is_online: false,
-    name: "Владимир",
-    uuid: "jdhnf978WEHJSNDL"
+    name: 'Владимир',
+    uuid: 'jdhnf978WEHJSNDL'
   },
 ];
 
 const myData = {
   is_online: true,
-  name: "Zёbra",
-  uuid: "98s7dfh9a8s7dhf"
+  name: 'Zёbra',
+  uuid: '98s7dfh9a8s7dhf'
 }
 
 const App = () => {
