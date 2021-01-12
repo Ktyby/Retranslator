@@ -4,11 +4,12 @@ import './MessageContainer.css';
 import Message from '../Message/Message';
 
 const MessageContainer = (props) => {
-	const messageList = props.messages.map(message => 
+	const messageList = props.messages.map((message, index) => 
 	  <Message 
-		  key={message.uuid}
+		  key={index}
 		  sender={props.members.find((member) => member.uuid === message.sender_id)} 
-		  message={message} />
+		  message={message} 
+		/>
 	  );
 
   return (

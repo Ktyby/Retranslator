@@ -11,7 +11,6 @@ const Main = (props) => {
       <ChatField
         members={props.members}
         messages={props.messages}
-        onSendNewMessage={props.onSendNewMessage} 
         me={props.me}
       />
     </section>

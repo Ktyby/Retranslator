@@ -13,7 +13,7 @@ const SendMessageForm = (props) => {
 		evt.preventDefault();
 
 		if (message.length > 0) {
-			await props.onSendNewMessage(message);
+			await props.onMessage(message);
 
 			setMessage('');
 		}

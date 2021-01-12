@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './ChatField.css';
 import MessageContainer from '../MessageContainer/MessageContainer';
 import SendMessageForm from '../SendMessageForm/SendMessageForm';
 
 const ChatField = (props) => {
+  const [messages, setMessages] = useState(props.messages);
+
+  const onMessage = (message) => {
+    const  myMessage = {
+      content: message,
+      sender_id: '98s7dfh9a8s7dhf',
+    };
+
+    setMessages(messages.concat(myMessage));
+  }
+
   return(
     <div className="chat__field">
-      <MessageContainer messages={props.messages} members={props.members}/>
-      <SendMessageForm onSendNewMessage={props.onSendNewMessage} me={props.me}/>
+      <MessageContainer messages={messages} members={props.members}/>
+      <SendMessageForm me={props.me} onMessage={onMessage}/>
     </div>
   );
 }

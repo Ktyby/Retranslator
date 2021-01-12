@@ -8,24 +8,21 @@ const localMessages = [
   {
     content: 'Сообщение 1',
     sender_id: 'mnzxcv97zx6chvo',
-    uuid: 'dg897sdfg'
   },
   {
     content: 'Сообщение 2',
     sender_id: '98s7dfh9a8s7dhf',
-    uuid: '8723hernm'
   },
   {
     content: 'Еще одно сообщение',
     sender_id: 'mnzxcv97zx6chvo',
-    uuid: '435nbcv98234'
   }
 ];
 
 const localMembers = [
   {
     is_online: true,
-    name: 'Алексей',
+    name: 'Zёbra',
     uuid: '98s7dfh9a8s7dhf'
   },
   {
@@ -57,10 +54,6 @@ const App = () => {
   const [members] = useState(localMembers);
   const [me] = useState(myData);
 
-  const onSendNewMessage = async (message) => {
-    console.log(message);
-  }
-
   return (
     <div className="app">
       <Header 
@@ -71,7 +64,6 @@ const App = () => {
       <Main
         members={members}
         messages={messages}
-        onSendNewMessage={onSendNewMessage}
         me={me}
       />
     </div>

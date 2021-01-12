@@ -5,6 +5,7 @@
 }
 .message__icon {
 	width: 30px;
+	height: 30px;
 }
 .message__bubble {
 	margin-left: 10px;
